@@ -21,8 +21,15 @@ class StudentController extends Controller
             'phone'=> 'required',
             'address'=> 'required',
             'course_of_study'=> 'required',
-            'profile_picture'=> '',
+            'profile_picture'=> 'nullable',
         ]);
+
+        // if($request->hasFile('profile_picture')){
+        //     $file = $request->file('profile_picture');
+        //     $filename = time() . '.' . $file->getClientOriginalExtension();
+        //     $file->move(public_path('students'), $filename);
+        //     $request=>merge
+        // }
 
         $student = Student::create($validated);
         return response()->json($student, 201);
