@@ -11,6 +11,6 @@ class Student extends Model
         return $this->belongsToMany(Course::class, 'enrollments');
     }
 
-    protected $fillable = ['first_name', 'last_name', 'email'];
+    protected $fillable = ['firstname', 'lastname', 'email', 'phone', 'address', 'course_of_study', 'profile_picture'];
     use HasFactory;
 }
