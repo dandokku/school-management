@@ -1,0 +1,12 @@
+configure db in env
+
+- make models (students, courses, enrollments)
+- define migrations by creating tables ()
+- define relationships in the models between course and students using the id
+
+- create the controllers (student and course)
+- define the api routes
+
+- enable mass assignment in the models (to assign multiple values at once)
+
+- test the api
